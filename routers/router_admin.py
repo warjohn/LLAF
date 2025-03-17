@@ -31,7 +31,7 @@ async def main_fun(msg: Message, state : FSMContext):
     
 @router_admin.message(F.text, ALL_STATE.admin)
 async def verify(msg: Message, state: FSMContext):
-    if str(msg.text) == '5500':
+    if str(msg.text) == '':
         await msg.answer(tt.text_cor_password)
         await msg.answer(tt.text_to_all, reply_markup = kb.admin_key)
         await state.set_state(ALL_STATE.all_rules)
