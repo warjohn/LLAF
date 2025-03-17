@@ -1,8 +1,8 @@
 from openai import OpenAI
 
 class OpenAIClient:
-    client = OpenAI(api_key="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")
-    client_2 = OpenAI(api_key = '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')
+    client = OpenAI(api_key="")
+    client_2 = OpenAI(api_key = '')
     
     @classmethod
     def get_assistant_ids(cls):
@@ -79,7 +79,7 @@ class OpenAIClient:
         )
         run = cls.client_2.beta.threads.runs.create_and_poll(
             thread_id=thread.id,
-            assistant_id='asst_mUdROjvxKyPGUQgWHoQmCw8z',
+            assistant_id='',
         )
         print('run', run)
         if run.status == 'completed':
